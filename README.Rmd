@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
 )
 x = c(1, 2)
 ```
+
 # c2d
 
 The goal of c2d is to host code for loading data used in creds2.
@@ -26,6 +27,21 @@ z = np.add(x, y)
 print(z)
 ```
 
+## Packages used
+
+We'll use the following packages.
+Make sure you've installed them before proceeding, e.g. with the following code:
+
+```{r, eval=FALSE}
+pkgs = c(
+  "DiagrammeR",
+  "tidyverse",
+  "tabplot"
+)
+install.packages(pkgs)
+```
+
+
 ## Flow diagram
 
 The plot below, generated using reproducible code stored in the script `data-flow-diag.R`, is a data flow diagram ([DFD](https://en.wikipedia.org/wiki/Data_flow_diagram)).
@@ -35,4 +51,17 @@ We will modify this as the project evolve as we clarify the work to be done.
 source("data-flow-diag.R")
 render_graph(g, layout = "tree")
 ```
+
+## Exploration of data
+
+```{r, message=FALSE}
+library(tidyverse)
+d = read_csv("all_cluster_variables.csv")
+tabplot::tableplot(d[2:10], sortCol = "Income")
+tabplot::tableplot(d[11:18])
+tabplot::tableplot(d[19:30])
+tabplot::tableplot(d[31:43])
+tabplot::tableplot(d[44:55])
+```
+
 

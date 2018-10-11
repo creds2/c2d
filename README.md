@@ -17,6 +17,20 @@ print(z)
 #> [ 3  5  9 15]
 ```
 
+## Packages used
+
+We’ll use the following packages. Make sure you’ve installed them before
+proceeding, e.g. with the following code:
+
+``` r
+pkgs = c(
+  "DiagrammeR",
+  "tidyverse",
+  "tabplot"
+)
+install.packages(pkgs)
+```
+
 ## Flow diagram
 
 The plot below, generated using reproducible code stored in the script
@@ -29,4 +43,38 @@ source("data-flow-diag.R")
 render_graph(g, layout = "tree")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+## Exploration of data
+
+``` r
+library(tidyverse)
+d = read_csv("all_cluster_variables.csv")
+tabplot::tableplot(d[2:10], sortCol = "Income")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+tabplot::tableplot(d[11:18])
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+
+``` r
+tabplot::tableplot(d[19:30])
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+
+``` r
+tabplot::tableplot(d[31:43])
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-4.png)<!-- -->
+
+``` r
+tabplot::tableplot(d[44:55])
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-5.png)<!-- -->
