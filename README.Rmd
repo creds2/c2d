@@ -78,3 +78,9 @@ RefManageR::WriteBib(refs, "references.bib")
 ```
 
 The citations are also saved in the GitHub folder.
+
+```{r, echo=FALSE, eval=FALSE}
+# Core binary files
+piggyback::pb_upload("UKCRED_2.1.1 Excess demand_v3.docx")
+```
+
