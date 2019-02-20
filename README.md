@@ -78,3 +78,27 @@ tabplot::tableplot(d[44:55])
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-4-5.png)<!-- -->
+
+## References
+
+References can be found in the ‘creds2’ folder of the
+energy-and-transport Zotero group:
+<https://www.zotero.org/groups/418217/energy-and-transport>?
+
+Get all the references by signing-in to Zotero, downloading the app, and
+syncing it on your computer.
+
+Alternatively, anyone can download the latest bib file from this as
+follows:
+
+``` r
+refs = RefManageR::ReadZotero(group = "418217", .params = list(collection = "AS8RTJ2X", limit = 100))
+#> Ignoring entry 'chatterton_financial_2016-1'  (line77) because:
+#>  A bibentry of bibtype 'InProceedings' has to specify the field: editor
+RefManageR::WriteBib(refs, "references.bib")
+#> Writing 6 Bibtex entries ...
+#> OK
+#> Results written to file 'references.bib'
+```
+
+The citations are also saved in the GitHub folder.

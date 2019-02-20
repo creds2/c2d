@@ -64,4 +64,17 @@ tabplot::tableplot(d[31:43])
 tabplot::tableplot(d[44:55])
 ```
 
+## References
 
+References can be found in the 'creds2' folder of the energy-and-transport Zotero group: https://www.zotero.org/groups/418217/energy-and-transport?
+
+Get all the references by signing-in to Zotero, downloading the app, and syncing it on your computer.
+
+Alternatively, anyone can download the latest bib file from this as follows:
+
+```{r}
+refs = RefManageR::ReadZotero(group = "418217", .params = list(collection = "AS8RTJ2X", limit = 100))
+RefManageR::WriteBib(refs, "references.bib")
+```
+
+The citations are also saved in the GitHub folder.
