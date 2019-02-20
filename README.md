@@ -83,7 +83,7 @@ tabplot::tableplot(d[44:55])
 
 References can be found in the ‘creds2’ folder of the
 energy-and-transport Zotero group:
-<https://www.zotero.org/groups/418217/energy-and-transport>?
+<https://www.zotero.org/groups/418217/energy-and-transport/items/collectionKey/AS8RTJ2X>
 
 Get all the references by signing-in to Zotero, downloading the app, and
 syncing it on your computer.
